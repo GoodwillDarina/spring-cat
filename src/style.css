@@ -1,0 +1,134 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #f6f2fe;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 320px;
+  height: 100vh;
+}
+
+main {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+footer {
+  width: 100%;
+  padding: 1rem;
+  font-size: 0.8em;
+  color: #cabfe0;
+  text-align: right;
+  box-sizing: border-box;
+}
+
+.welcome-layer {
+  text-align: center;
+}
+
+.flowers-layer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+  & img {
+    position: absolute; 
+    top: -1000;
+    visibility: hidden;
+  }
+}
+
+.cat-layer {
+  position: absolute;
+  bottom: -15px;
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+
+  & img {
+    position: relative;
+    z-index: 10;
+    max-height: 560px;
+    object-fit: contain;
+  }
+}
+
+.toast {
+	visibility: hidden;
+	position: fixed;
+  bottom: 20px;
+  right: 0;
+  left: 0;
+  z-index: 12;
+  width: 175px;
+  margin: 0 auto;
+  padding: 6px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: rgb(148 225 240);
+  border-radius: 16px;
+
+	&.visible {
+		visibility: visible;
+		animation: fadein 0.3s cubic-bezier(0.9, 0.9, 0.9, 1.5), fadeout 0.5s 3s forwards;
+	}
+}
+
+@keyframes fadein {
+	0% {
+		bottom: 0;
+		opacity: 0;
+	}
+	80% {
+		bottom: 25px;
+	}
+	100% {
+		bottom: 20px;
+		opacity: 1;
+	}
+}
+
+@keyframes fadeout {
+	0% {
+		bottom: 20px;
+		opacity: 1;
+	}
+	20% {
+		bottom: 25px;
+	}
+	100% {
+		bottom: 0;
+		opacity: 0;
+	}
+}

@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./src/images/sakura.webp" />
+    <link rel="stylesheet" href="./src/style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>С днем мартовского кота!</title>
+  </head>
+  <body>
+    <main>
+      <section class="animation-layer">
+        <div class="welcome-layer">
+           <h1>
+            <img src="./src/images/title.png" width="85%" alt="Хочу весны!"/>
+           </h1>
+        </div>
+        <div class="cat-layer">
+          <img id="persik" src="./src/images/persik.png" width="40%" alt="Это Персик, который всегда был рад весне (на самом деле я не помню точно, но фото было сделано в начале весны). Персик любил много гулять, а еще у него были самые тактильные лапки"/>
+        </div>
+        <div class="flowers-layer">
+          <canvas></canvas>
+          <img id="leaf" src="./src/images/sakura.webp" width="40" alt="Листик сакуры!"/>
+        </div>
+      </section>
+
+      <div id="toast" class="toast" role="status" aria-live="polite">
+        Нажми на Персика 🐈
+      </div>
+
+      <footer>
+        © Goodwill Darina, <span id="currentYear"></span>
+      </footer>
+    </main>
+    <audio id="sound" loop hidden>
+      <source src="./src/sounds/cat.mp3">
+    </audio>
+
+    <script type="module" src="./src/main.ts"></script>
+  </body>
+</html>
