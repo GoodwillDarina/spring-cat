@@ -16,7 +16,7 @@
            </h1>
         </div>
         <div class="cat-layer">
-          <img id="persik" src="./src/images/persik.png" width="40%" alt="Это Персик, который всегда был рад весне (на самом деле я не помню точно, но фото было сделано в начале весны). Персик любил много гулять, а еще у него были самые тактильные лапки"/>
+          <img id="persik" src="./src/images/persik.png" width="100%" alt="Это Персик, который всегда был рад весне (на самом деле я не помню точно, но фото было сделано в начале весны). Персик любил много гулять, а еще у него были самые тактильные лапки"/>
         </div>
         <div class="flowers-layer">
           <canvas></canvas>
@@ -70,8 +70,8 @@
 
         const ctx = canvas.getContext('2d');
 
-        canvas.width = document.body.clientWidth;
-        canvas.height = document.body.clientHeight;
+        canvas.width = document.body.clientWidth - 20;
+        canvas.height = document.body.clientHeight - 20;
 
         const width = canvas.width;
         const height = canvas.height;

@@ -11,17 +11,27 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+html {
+  min-width: 320px;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
 }
 
 body {
   position: relative;
-  margin: 0;
+  margin: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
   min-width: 320px;
   height: 100vh;
+  overflow: hidden;
+  box-sizing: border-box;
 }
 
 main {
@@ -30,8 +40,8 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  width: 100%;
-  height: 100%;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
 }
 
 h1 {
@@ -68,7 +78,7 @@ footer {
 
 .cat-layer {
   position: absolute;
-  bottom: -15px;
+  bottom: -20px;
   text-align: center;
   left: 0;
   right: 0;
