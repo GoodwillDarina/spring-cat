@@ -40,8 +40,6 @@
     <script>
       document.querySelector('#currentYear').innerHTML = `${new Date().getFullYear()}`;
 
-      setupSakura();
-
       const TIMEOUT_MS = 5000;
       const timeoutId = setTimeout(() => {
         const toast = document.getElementById('toast');
@@ -49,6 +47,7 @@
       }, TIMEOUT_MS);
 
       const persik = document.querySelector('#persik');
+      persik.addEventListener('click', setupSakura, { once: true });
       persik.addEventListener('click', soundPlay);
 
       function soundPlay () {
@@ -78,7 +77,7 @@
         const height = canvas.height;
         const leaf = document.getElementById('leaf');
         const leafs = [];
-        const count = 100;
+        const count = 200;
 
         for (let i = 0; i < count; i++) {  
           let angle = 10 + Math.random() * 30
@@ -86,7 +85,7 @@
           
           leafs.push({
             x: Math.random() * width,
-            y: Math.random() * height,
+            y: Math.random() * height * -10,
             w: 30,
             h: 30 * (leaf.getBoundingClientRect().height / leaf.getBoundingClientRect().width),
             v: 20 / angle,
